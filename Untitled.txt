@@ -1,0 +1,55 @@
+
+Given your updated workflow, where the user first chooses a movie (obtaining a movie_id), then selects a hall (hall_id), and finally chooses a seat (with price considerations), the database schema needs to accommodate this specific sequence of actions. This approach requires slight adjustments to ensure the schema supports this flow efficiently, especially regarding the relationship between movies, halls, and showtimes.
+
+Adjusted Entities and Their Fields
+Movies
+
+id (PK)
+title
+description
+duration
+genre
+release_date
+rating
+Halls
+
+id (PK)
+name
+capacity
+Showtimes
+
+id (PK)
+movie_id (FK to Movies)
+hall_id (FK to Halls)
+show_date
+start_time
+end_time
+This table now directly links movies to halls, indicating when and where each movie is showing.
+Seats
+
+id (PK)
+hall_id (FK to Halls)
+seat_number
+seat_row
+is_vip
+price: Reflects the seat's price, which can vary based on factors like VIP status or seat location.
+Bookings
+
+id (PK)
+showtime_id (FK to Showtimes)
+seat_id (FK to Seats)
+user_id (FK to Users)
+booking_time
+status
+Users (if managing user accounts)
+
+id (PK)
+name
+email
+password
+Key Relationships
+Movies are linked to Showtimes, allowing users to find when and where movies are playing.
+Showtimes bridge Movies and Halls, specifying the exact times movies are shown in each hall.
+Seats are associated with Halls, but the booking is linked to a Showtime (and implicitly a movie and hall) and a specific seat.
+Bookings record the association between Showtimes, Seats, and Users, finalizing the user's choices.
+This structure supports your specific user journey: selecting a movie first, then a hall based on the movie's showtimes, and finally a seat, with the booking process tying all choices together. Let's update the diagram to reflect this precise flow.

@@ -1,0 +1,30 @@
+$mobile: new-breakpoint(max-width 480px);
+$desktop: new-breakpoint(min-width 850px);
+
+body {
+	background-color: $color-white;
+}
+
+.p-wrapper {
+	@include outer-container(100%);
+
+	.p-primary {
+		@include span-columns(4);
+		padding: 6rem;
+		background-color: darken($color-white, 2%);
+		height:100%;
+		@include media($mobile) {
+			 @include span-columns(12);
+		}
+	}
+
+	.p-secondary {
+		@include span-columns(8);
+		padding: 6rem 5rem 10rem 2.5rem;
+		background-color: $color-white;
+		height:100%;
+		@include media($mobile) {
+			 @include span-columns(12);
+		}
+	}
+}

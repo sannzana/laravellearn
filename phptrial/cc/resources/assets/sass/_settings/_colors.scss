@@ -1,0 +1,56 @@
+//General-colors
+$color-black: #000000;
+$color-grey-blue:#4d545d;
+$color-dark-grey:#333333;
+$color-mid-grey: #696969;
+$color-light-grey: #bbbbbb;
+$color-rosy-brown: #BC8F8F;
+$color-burly-wood-brown: #deb887;
+$color-white: #ffffff;
+$color-seashell-white: #FFF5EE;
+$color-honey-dew-white: #f0fff0;
+$color-old-lace-white: #fdf5e6;
+$color-snow-white: #fffafa;
+$color-misty-rose-pink: #ffe4e1;
+$color-corn-silk-yellow: #fff8dc;
+$color-thistle-purple: #d8bfd8;
+$color-peach-puff-orange: #ffdab9;
+$color-papaya-whip-orange: #ffefd5;
+$color-mint-cream-green: #f5fffa;
+
+// Body
+$body-bg: #f5f8fa;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// alerts
+$color-primary: #3097D1;
+$color-info: #8eb4cb;
+$color-success: #2ab27b;
+$color-warning: #cbb956;
+$color-danger:  #bf5329;
+$color-alert:  #bf5329;
+
+
+
+
+
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $color-rosy-brown;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($color-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;

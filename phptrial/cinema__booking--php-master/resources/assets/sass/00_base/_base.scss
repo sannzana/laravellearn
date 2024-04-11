@@ -1,0 +1,7 @@
+@import "_regions";
+@import "_custom-type";
+@import "_highlight";
+
+body {
+ background-color: darken($color-mid-grey, 5%);
+}

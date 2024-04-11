@@ -1,0 +1,334 @@
+.m-form-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+
+    &__group {
+        background: $color-grey-blue;
+        border-radius: 5px;
+        box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
+        width: 600px;
+        padding: 50px;
+        margin: 25px;
+
+        h2 {
+            color: $color-white;
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+.m-form-login {
+    color: #222;
+
+    label {
+        border-radius: 0.25rem;
+        padding: 1rem;
+        color: #3A3F44;
+    }
+
+    input {
+        &[type="date"],
+        &[type="email"],
+        &[type="password"],
+        &[type="submit"],
+        &[type="text"] {
+            width: 100%;
+            border: 0;
+            color: inherit;
+            font: inherit;
+            margin: 0;
+            outline: 0;
+            padding: 0;
+            -webkit-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            color: $color-dark-grey;
+        }
+    }
+
+    label {
+        background-color: $color-black;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        color: #FFF;
+    }
+
+    .m-form__label {
+        &--username {
+            &:before {
+                content: '\f007';
+                font: 14px fontawesome;
+                color: $color-white;
+            }
+        }
+
+        &--email {
+            &:before {
+                content: '\f003';
+                font: 14px fontawesome;
+                color: $color-white;
+            }
+        }
+
+        &--dob {
+            &:before {
+                content: '\f1fd';
+                font: 14px fontawesome;
+                color: white;
+            }
+        }
+
+        &--password {
+            &:before {
+                content: '\f023';
+                font: 14px fontawesome;
+                color: white;
+            }
+        }
+
+        &--password-confirm {
+            &:before {
+                content: '\f046';
+                font: 14px fontawesome;
+                color: white;
+            }
+        }
+    }
+
+    input {
+        &[type="date"],
+        &[type="email"],
+        &[type="password"],
+        &[type="text"] {
+            background-color: #ffffff;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        &[type="text"] {
+            &:focus,
+            &:hover {
+                background-color: #ffffff;
+            }
+        }
+
+        &[type="date"] {
+            &:focus,
+            &:hover {
+                background-color: #ffffff;
+            }
+        }
+
+        &[type="password"] {
+            &:focus,
+            &:hover {
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
+.m-form-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+
+
+    &__checkbox--remember {}
+}
+
+.hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.m-help-block {
+    color: $color-danger;
+    padding: 0.2rem;
+    margin-left: 0.2rem;
+    border: 2px dashed $color-danger;
+}
+//admin-form
+
+.admin-form > div {
+    padding: 2em;
+    background: #fff;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.admin-form input,
+textarea {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.admin-form input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.admin-form input[type="submit"] {
+    padding: 0.3em 1em;
+    background: #555;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.admin-form label {
+    width: 5em;
+    margin-right: 0.5em;
+    text-align: right;
+}
+
+.admin-form input[type="submit"] {
+    margin-left: auto;
+}
+
+.admin-form div:first-child p:first-child {
+    justify-content: flex-end;
+}
+
+.admin-form textarea {
+    resize: vertical;
+    color: #aaa;
+}
+
+.admin-form div > p {
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.admin-form small {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+/* small screens */
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+
+        p {
+            display: block;
+        }
+    }
+
+    label {
+        display: block;
+        width: auto;
+        text-align: left;
+    }
+
+    form > div {
+        width: auto;
+
+        + div {
+            margin-left: 0;
+            margin-bottom: 1em;
+            order: -1;
+        }
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+.form-horizontal {
+    @extend .admin-form;
+}
+
+.m-admin-ul {
+    position: relative;
+    height: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    li {
+        padding-left: 1rem;
+
+        &:hover {
+            @include transition(all 300ms ease-in-out);
+            background-color: lighten($color-mid-grey, 50);
+
+            &:last-child {
+                background-color: darken($color-white, 2%);
+            }
+        }
+    }
+}
+
+.m-upload-area {
+    width: 90%;
+    margin-left: 5rem;
+    padding: 15px;
+    border: 1px solid $color-dark-grey;
+    background: rgba(0,0,0,0.7);
+    margin-top: 1rem;
+    transition: background 0.25s;
+
+    &:hover {
+        border: 1px solid $color-mid-grey;
+        background: rgba(0,0,0,0.6);
+        cursor:pointer;
+    }
+}
+
+.m-dropZone {
+    border: 2px dashed $color-light-grey;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+    color: $color-light-grey;
+}
+//counter for selection quantity
+
+.m-button--will-increment {
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+
+input.qtyplus {
+    width: 25px;
+    height: 25px;
+}
+
+input.qtyminus {
+    width: 25px;
+    height: 25px;
+}

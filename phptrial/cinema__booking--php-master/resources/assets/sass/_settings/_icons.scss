@@ -1,0 +1,49 @@
+//login
+
+         [href*="/register"]::before {
+             content: '\f090';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [href*="/home"]::before {
+             content: '\f2c0';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [href*="/admin"]::before {
+             content: '\f2c0';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [href*="/logout"]::before {
+             content: '\f2c0';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [type*="submit"]::before {
+             content: '\f058';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [type*="reset"]::before {
+             content: '\f057 ';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }

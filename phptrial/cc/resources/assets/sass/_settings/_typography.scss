@@ -1,0 +1,65 @@
+// Typography
+// mixin @include font-weight(weight); to add weight to raleway
+$font-family-sans-serif: "raleway", sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+$font-heading-decorative: "industry-inc-3d";
+$font-heading-primary: "industry-inc-base";
+$font-heading-alternate: "postino-std";
+
+html {
+    font-size: $font-size-base;
+    font-family: $font-family-sans-serif;
+}
+
+
+
+body {
+    background-color: white;
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #333;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-heading-primary;
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    font-family: $font-heading-primary;
+    margin-top: 0;
+    font-size: 3.998em;
+}
+
+h2 {
+    font-size: 2.827em;
+}
+
+h3 {
+    font-size: 1.999em;
+}
+
+h4 {
+    font-size: 1.414em;
+}
+
+.font_small,
+small {
+    font-size: 0.707em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
